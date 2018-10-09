@@ -50,7 +50,7 @@ export const constantRouterMap = [
     children: [
       {
         path: 'child1',
-        name: 'child1',
+        name: 'child1-1',
         component: _import('test/list'),
         meta: {
           title: '子标签1',
@@ -59,7 +59,7 @@ export const constantRouterMap = [
       },
       {
         path: 'child2',
-        name: 'child2',
+        name: 'child1-2',
         component: _import('test/list2'),
         meta: {
           title: '子标签2',
@@ -68,7 +68,7 @@ export const constantRouterMap = [
       },
       {
         path: 'child3',
-        name: 'child3',
+        name: 'child1-3',
         component: _import('test/list'),
         meta: {
           title: '子标签3',
@@ -99,7 +99,7 @@ export const constantRouterMap = [
     children: [
       {
         path: 'child1',
-        name: 'child1',
+        name: 'child2-1',
         component: _import('test/list2'),
         meta: {
           title: '子标签1',
@@ -120,7 +120,7 @@ export const constantRouterMap = [
     children: [
       {
         path: 'child1',
-        name: 'child1',
+        name: 'child3-1',
         component: _import('test/list'),
         meta: {
           title: '子标签1',
@@ -129,7 +129,7 @@ export const constantRouterMap = [
       },
       {
         path: 'child2',
-        name: 'child2',
+        name: 'child3-2',
         component: _import('test/list2'),
         meta: {
           title: '子标签2',
@@ -138,7 +138,7 @@ export const constantRouterMap = [
       },
       {
         path: 'child3',
-        name: 'child3',
+        name: 'child3-3',
         component: _import('test/list'),
         meta: {
           title: '子标签3',

@@ -5,5 +5,5 @@ import user from './user'
 
 export default {
   test: test,
-  user: user,
+  user: user
 }
