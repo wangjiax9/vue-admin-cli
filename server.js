@@ -20,6 +20,38 @@ const upload = multer({
 
 app.use(bodyParser.json())
 
+router.all('/admin/new/users/*', async (req, res, next) => {
+  res.status(200).json({
+    'msg': '请求成功',
+    'code': 0,
+    'data': {
+      'status': 0,
+      'ban_reason': 0,
+      'pic_pick_count': 10,
+      'nickname': '偷偷湿污外衰',
+      'id': 5,
+      'fans_count': 39,
+      'last_login_time': 1534928970,
+      'gender': 1,
+      'follow_count': 0,
+      'register_time': 1534213788,
+      'comment_count': 6,
+      'liked_count': 2,
+      'avatar': 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLREFgyfAcpZuG1Y0xveV3e7PBwUD54alm5ltDXljGHJElbtkSia9iadhVgUia7vE4pFS840kRk0fg2w/132',
+      'release_time': 1535040000
+    }
+  })
+})
+
+router.all(/^\/admin\/test.*$/, async (req, res, next) => {
+  res.status(200).json({
+    msg: '请求成功',
+    meta: {'total': 0},
+    code: 0,
+    data: []
+  })
+})
+
 router.all(/^\/admin\/(spiders|thread)\/.*$/, async (req, res, next) => {
   request({
       baseUrl: 'http://10.242.92.239:5000',

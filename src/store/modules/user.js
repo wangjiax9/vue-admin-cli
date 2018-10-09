@@ -1,4 +1,4 @@
-import { logout, getUserInfo } from '@/api/user'
+import api from '../../api'
 import { getToken, removeToken } from '@/utils/auth'
 
 const user = {
@@ -35,7 +35,7 @@ const user = {
         } else {
           uid = 9527
         }
-        getUserInfo(uid).then(response => {
+        api.user.getUserInfo(uid).then(response => {
           const data = response.data.data
           if (data.roles && data.roles.length > 0) { // 验证返回的roles是否是一个非空数组
             commit('SET_ROLES', data.roles)
@@ -58,14 +58,14 @@ const user = {
     // 登出
     LogOut({ commit, state }) {
       return new Promise((resolve, reject) => {
-        logout().then(() => {
-          commit('SET_UID', '')
-          commit('SET_ROLES', [])
-          removeToken()
-          resolve()
-        }).catch(error => {
-          reject(error)
-        })
+        // logout().then(() => {
+        //   commit('SET_UID', '')
+        //   commit('SET_ROLES', [])
+        //   removeToken()
+        //   resolve()
+        // }).catch(error => {
+        //   reject(error)
+        // })
       })
     },
 

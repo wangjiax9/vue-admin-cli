@@ -1,9 +1,30 @@
 import request from '@/utils/request'
 
-// test
-export function test(uid) {
-  return request({
-    url: '/test/' + uid,
-    method: 'get'
-  })
+'use strict'
+
+export default {
+
+  /**
+   * 测试
+   * @param query
+   */
+  test1 (query) {
+    return request({
+      url: '/test1',
+      method: 'get',
+      params: query
+    })
+  },
+
+  /**
+   * 测试
+   * @param query
+   */
+  test2 (query) {
+    return request({
+      url: '/test2',
+      method: 'get',
+      params: query
+    })
+  }
 }

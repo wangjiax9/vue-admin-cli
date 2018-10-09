@@ -54,7 +54,7 @@
 </template>
 
 <script>
-  import { test } from '@/api/test'
+  // import { test } from '@/api/test'
   import BoxImage from '@/components/upload/BoxImage'
 
   export default {
@@ -75,7 +75,7 @@
       }
     },
     created () {
-      // this.getList()
+      this.getList()
     },
     filters: {
       ellipse: (v) => {
@@ -102,7 +102,7 @@
       // 获取列表
       getList () {
         this.listLoading = true
-        test(this.listQuery).then(response => {
+        this.api.test.test2(this.listQuery).then(response => {
           this.meta = response.data.meta
           this.list = response.data.data
           this.listLoading = false
