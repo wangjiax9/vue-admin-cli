@@ -20,6 +20,8 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 `````
+> 正式环境：master   
+> 开发/测试环境：dev
 
 - 如要开启本地调试（图片上传）修改{PROJECT-HOME}/src/main.js：`_LOCAL_DEBUG` 改为 `true`，
 同时修改 `window.ypw_token`的值
