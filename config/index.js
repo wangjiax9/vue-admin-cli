@@ -10,7 +10,25 @@ module.exports = {
     // Paths
     assetsSubDirectory: '',
     assetsPublicPath: '',
-    proxyTable: {},
+    // 接口代理
+    proxyTable: {
+      '/admin/new/users': {
+        // target: 'http://localhost:8888/admin',
+        target: 'http://10.242.78.201:12345',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/admin/new/users': '/admin/new/users'
+        }
+      },
+      '/admin/wechat/fuchsiabox': {
+        // target: 'http://localhost:8888/admin',
+        target: 'http://10.242.78.201:12345',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/admin/new/users': '/admin/new/users'
+        }
+      },
+    },
 
     // Various Dev Server settings
     host: '0.0.0.0', // can be overwritten by process.env.HOST
